@@ -1,0 +1,106 @@
+@import 'var.less';
+@import 'btn.less';
+
+.section-jobs {
+    padding-top: 70px;
+    padding-bottom: 50px;
+
+    @media only screen and (min-width: @desktop) {
+        padding-top: 195px;
+        padding-bottom: 130px;
+    }
+
+    .sub-title {
+        color: @dark-pink;
+    }
+
+    .title {
+        color: @dark-blue;
+    }
+
+    &-info {
+        padding-top: 25px;
+
+        @media only screen and (min-width: @tablet) {
+            margin-left: 32px;
+            padding-top: 0;
+        }
+
+        h4 {
+            font-weight: normal;
+        }
+
+        a {
+            color: @dark-blue;
+            font-size: 24px;
+            transition: .4s;
+        
+            &:hover {
+                color: @purple-blue;
+            }
+        }
+
+        .company-info {
+
+            @media only screen and (min-width: @tablet) {
+                margin-top: 10px;
+            }
+            span {
+                color: @gray;
+                font-size: 15px;
+                margin-bottom: 7px;
+            }
+             
+            i {
+                color: #bbb;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+
+        }
+
+    }
+
+    &-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 35px;
+
+        @media only screen and (min-width: @tablet) {
+            padding-top: 0;
+            margin-left: auto;
+        }
+
+
+
+        a {
+            text-transform: capitalize;
+            border-radius: 30px;
+            padding: 4px 33px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        span {
+            color: #454d72;
+
+            @media only screen and (min-width: @tablet) {
+                margin-top: auto;
+            }
+         }
+    }
+
+    &-item {
+        padding: 40px 20px;
+        transition: .4s;
+        &:hover {
+            box-shadow: 0 22px 57px 0 rgba(34, 41, 72, 0.05);
+
+        }
+        @media only screen and (min-width: @tablet) {
+            display: flex;
+        }
+    }
+  
+}

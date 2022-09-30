@@ -1,0 +1,85 @@
+@import 'var.less';
+
+body {
+     margin: 0;
+     font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 , p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+    border: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media only screen and (min-width: @tablet) {
+          max-width: 750px;
+    } 
+    
+    @media only screen and (min-width: @desktop) {
+        max-width: 1200px;
+    }
+ }
+
+ .title {
+     font-size: 30px;
+     line-height: 1.4;
+     margin-bottom: 50px;
+     text-align: center;
+     @media only screen and (min-width: @tablet) {
+         font-size: 50px;
+         line-height: 1.2;
+         margin-bottom: 95px;
+     }
+ }
+
+ .sub-title {
+     font-size: 16px;
+     text-transform: uppercase;
+     margin-bottom: 28px;
+     text-align: center;
+     font-weight: normal;
+}
+
+.back-to-top {
+    background: @dark-pink;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    position: fixed;
+    bottom: 16px;
+    right: 18px;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+
+    i {
+        color: @white;
+        font-size: 25px;
+        line-height: 50px;
+
+    }
+}
+

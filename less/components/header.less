@@ -1,0 +1,204 @@
+@import 'var.less';
+@import 'btn.less';
+
+.header {
+
+    &.header-fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: @white;
+        z-index: 10;
+        box-shadow: 0 10px 15px rgba(25, 25, 25,  10%);
+    }
+
+    &-logo {
+        display: inline-block;
+
+    }
+
+    &-container {
+        padding-top: 10px;
+
+        @media only screen and (min-width: @desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    }
+
+    .navigation-bar {
+        display: flex;
+        flex-direction: column;
+        background-color: #4c4c4c;
+        padding: 5px;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        @media only screen and (min-width: @desktop) {
+            background-color: inherit;
+        }
+
+    }
+
+    .menu-text {
+
+        background-color: #222;
+        margin: 5px;
+        padding: 7px 10px;
+        color: @white;
+        text-transform: uppercase;
+        display: inline-block;
+        align-self: flex-end;
+        border-radius: 4px;
+        cursor: pointer;
+
+        span {
+            font-weight: bold;
+        }
+
+
+        @media only screen and (min-width: @desktop) {
+            display: none;
+        }
+
+
+    }
+
+    &-nav {
+
+        @media only screen and (max-width: @desktop) {
+            display: none;
+        }
+        @media only screen and (min-width: calc(@desktop + 1px)) {
+            display: block !important;
+        }
+
+
+        .header-nav-parent>li:not(.has-child) {
+            padding-left: 20px;
+
+            @media only screen and (min-width: @desktop) {
+                padding-left: 0;
+            }
+        }
+
+        .header-nav-parent>li>a {
+
+            @media only screen and (min-width: @desktop) {
+                padding: 30px 20px;
+            }
+
+        }
+
+
+
+
+
+        a {
+            color: @white;
+            padding: 10px 20px;
+            margin: 2px 5px;
+            display: block;
+            cursor: pointer;
+
+            @media only screen and (min-width: @desktop) {
+                color: @light-blue;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: @dark-pink;
+                }
+            }
+
+
+        }
+
+
+
+        .has-child {
+
+            @media only screen and (min-width: @desktop) {
+                position: relative;
+            }
+
+            li {
+                padding-left: 40px;
+
+                @media only screen and (min-width: @desktop) {
+                    padding-left: 0;
+                }
+
+                a {
+                    @media only screen and (min-width: @desktop) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            ul {
+                display: none;
+                @media only screen and (min-width: @desktop) {
+                    opacity: 0;
+                    display: block !important;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 100%;
+                    width: 170px;
+                    background-color: @white;
+                    border-top: 5px solid @dark-pink;
+                    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+                    transition: .3s;
+                }
+            }
+
+            &:hover {
+                ul {
+                    @media only screen and (min-width: @desktop) {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    .header-nav-parent {
+        @media only screen and (min-width: @desktop) {
+            display: flex;
+            align-items: flex-start;
+        }
+
+    }
+
+    &-links {
+        display: none;
+
+        @media only screen and (min-width: @desktop) {
+            display: block;
+
+
+            .btn-fill-pink {
+                transition: .3s;
+                &:hover {
+                    .btn-fill-pink-hover;
+                }
+            }
+        } 
+        
+        a {
+            @media only screen and (min-width: @desktop) and (max-width : @desktop-lg) {
+                padding: 15px 27px;
+                
+            }
+        }
+
+            
+
+
+    }
+}

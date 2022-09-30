@@ -1,0 +1,195 @@
+@import 'var.less';
+@import 'btn.less';
+
+.footer {
+    background-color: #010b1d;
+    padding-top: 80px;
+
+    @media only screen and (min-width: @tablet) {
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    @media only screen and (min-width: @desktop) {
+        padding-top: 170px;
+        padding-bottom: 20px;
+    }
+
+    &-container {
+        @media only screen and (min-width: @mobile-xs) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-item {
+        margin-bottom: 50px;
+        @media only screen and (min-width: @mobile-xs) {
+            flex-basis: calc((100% / 2 ) - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        @media only screen and (min-width: @tablet) {
+            flex-basis: calc((100% / 3 ) - 20px); 
+        }
+        @media only screen and (min-width: @desktop) {
+            flex-basis: calc((100% / 4 ) - 20px); 
+        }
+
+        h4 {
+            color: @white;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        p {
+            color: #868c98;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #868c98;
+            transition: .3s;
+            &:hover {
+                color: @dark-pink;
+                padding-left: 10px;
+            }
+        }
+
+        address {
+            color: @gray-blue;
+            font-style: normal;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        form {
+            display: flex;
+            margin-top: 50px;
+            input[type="email"] {
+               background-color: @white;
+               border-top-left-radius: 5px;
+               border-bottom-left-radius: 5px;
+               padding: 10px 20px;
+               width: 82%;
+
+            }
+
+            input[type="submit"] {
+                background-color: @dark-pink;
+                text-indent: -9999px;
+                flex-grow: 1;
+                border-bottom-right-radius:5px;
+                border-top-right-radius: 5px;
+                background-image: url('/public/img/form-icon.webp');
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: pointer;
+            }
+        }
+
+        
+
+    }
+
+    &-bottom {
+        @media only screen and (min-width: @mobile-xs) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        padding-bottom: 30px;
+        a {
+            margin-bottom: 15px;
+            display: inline-block;
+            @media only screen and (min-width: @mobile-xs) {
+                flex-basis: calc((100% / 2 ) - 20px);
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            @media only screen and (min-width: @tablet) {
+                flex-basis: calc((100% / 3 ) - 20px); 
+            }
+            @media only screen and (min-width: @desktop) {
+                flex-basis: calc((100% / 4 ) - 20px); 
+            }
+        }
+        .footer-bottom-item {
+
+            margin-bottom: 15px;
+            @media only screen and (min-width: @mobile-xs) {
+                flex-basis: calc((100% / 2 ) - 20px);
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            @media only screen and (min-width: @tablet) {
+                flex-basis: calc((100% / 3 ) - 20px); 
+            }
+            @media only screen and (min-width: @desktop) {
+                flex-basis: calc((100% / 4 ) - 20px); 
+            }
+            span {
+                color: @white;
+
+                &:nth-of-type(1) {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &-copyright {
+
+        border-top: 1px solid #2d3544;
+        padding: 33px 0 20px;
+
+        @media only screen and (min-width: @desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        p, i {
+            color: #888;
+        }
+
+        i {
+            transition: .3s;
+        }
+
+        p {
+           line-height: 1.8;
+           margin-bottom: 20px;
+           @media only screen and (min-width: @desktop) {
+               margin-bottom: 0;
+           }
+        }
+
+        a {
+            color: @dark-pink;
+
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 5px;
+
+            a {
+                &:hover {
+                    i {
+                        color: @dark-pink;
+                    }
+                }
+            }
+        }
+    }
+}

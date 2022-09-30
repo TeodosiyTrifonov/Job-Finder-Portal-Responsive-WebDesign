@@ -1,0 +1,79 @@
+@import 'var.less';
+@import 'btn.less';
+
+.section-apply {
+    background-image: url('/public/img/how-applybg.png.webp');
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media only screen and (min-width: @tablet) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .sub-title {
+        color: @dark-pink;
+    }
+
+    .title {
+        color: @white;
+    }
+
+    &-container {
+        @media only screen and (min-width: @tablet) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-item {
+       
+        
+        background-color: #26317f;
+        padding: 34px 10px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @media only screen and (min-width: @tablet) {
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-basis: calc((100% / 2 ) - 20px);
+        }
+
+        @media only screen and (min-width: @desktop) {
+            flex-basis: calc((100% / 3 ) - 20px);
+        }
+        
+
+        i {
+            font-size: 60px;
+            transition: transform 650ms ease-in-out;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        i,h3 {
+            color: @white;
+
+        }
+
+        p {
+            color: @light-purpel;
+            line-height: 30px;
+        }
+
+        &:hover {
+            i {
+                transform: rotateY(-180deg);
+            }
+        }
+    }
+
+
+
+}

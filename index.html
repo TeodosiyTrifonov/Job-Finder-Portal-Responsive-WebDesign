@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./public/img/favicon.ico">
+
+    <link rel="stylesheet" href="public/css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="public/js/swiper/swiper-bundle.min.css">
+
+
+    <script src="public/js/jquery-3.6.0.min.js"></script>
+    <script src="public/js/custom.js"></script>
+    <script src="public/js/swiper/swiper-bundle.min.js"></script>
+
+    <title>Job Finder Portal</title>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <a href="" class="header-logo">
+                    <img src="data:image/webp;base64,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"
+                        alt="logo job finder portal">
+                </a>
+
+                <div class="navigation-bar">
+                    <div class="menu-text">
+                        <span>Menu</span>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <nav class="header-nav">
+                        <ul class="header-nav-parent">
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="">Find a job</a>
+                            </li>
+
+                            <li>
+                                <a href="">About</a>
+                            </li>
+
+                            <li class="has-child">
+                                <a href="">Page+ </a>
+                                <ul>
+                                    <li>
+                                        <a href="">Blog</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">Blog Details</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">Elements</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">Job Details</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <a href="">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="header-links">
+                    <a href="" class="btn-fill-pink">Register</a>
+                    <a href="" class="btn-border-pink">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-form">
+        <div class="container">
+            <div class="section-form-inner">
+                <h1>Find the most exciting startup jobs</h1>
+                <form class="job-form">
+                    <div class="job-form-input-text">
+                        <input class="form-element" type="text" placeholder="Job Tittle or keyword">
+                    </div>
+                    <div class="job-form-select">
+                        <select class="form-element">
+                            <option>Location UK</option>
+                            <option>Location USA</option>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn-fill-pink" value="Find job">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-categories">
+        <div class="container">
+            <div class="section-categories-container">
+                <h3 class="sub-title">FEATURED TOURS PACKAGES</h3>
+                <h2 class="title">Browse Top Categories</h2>
+                <div class="section-categories-list">
+
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-solid fa-pen-ruler"></i>
+                            <h4>
+                                <a href="">Design & Creative</a>
+                            </h4>
+                            <span>(654)</span>
+                        </div>
+                    </div>
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-solid fa-pen-ruler"></i>
+                            <h4>
+                                <a href="">Design & Development</a>
+                            </h4>
+                            <span>(658)</span>
+                        </div>
+                    </div>
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-brands fa-salesforce"></i>
+                            <h4>
+                                <a href="">Sales & Marketing</a>
+                            </h4>
+                            <span>(658)</span>
+                        </div>
+                    </div>
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-solid fa-helmet-safety"></i>
+                            <h4>
+                                <a href="">Mobile Application</a>
+                            </h4>
+                            <span>(659)</span>
+                        </div>
+                    </div>
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-solid fa-helmet-safety"></i>
+                            <h4>
+                                <a href="">Construction</a>
+                            </h4>
+                            <span>(659)</span>
+                        </div>
+                    </div>
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-solid fa-helmet-safety"></i>
+                            <h4>
+                                <a href="">Information Technology</a>
+                            </h4>
+                            <span>(654)</span>
+                        </div>
+                    </div>
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-solid fa-sign-hanging"></i>
+                            <h4>
+                                <a href="">Real Estate</a>
+                            </h4>
+                            <span>(658)</span>
+                        </div>
+                    </div>
+                    <div class="section-categories-item">
+                        <div>
+                            <i class="fa-solid fa-pen-ruler"></i>
+                            <h4>
+                                <a href="">Content Writer</a>
+                            </h4>
+                            <span>(659)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-categories-btn">
+                    <a href="" class="btn-border-purple">Browse all sectors</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-online-cv">
+        <div class="container">
+            <div class="section-online-cv-container">
+                <h3 class="sub-title">FEATURED TOURS PACKAGES</h3>
+                <h2 class="title"> Make a Difference with Your Online Resume!</h2>
+                <div class="section-online-cv-btn">
+                    <a href="" class="btn-border-purple">Upload your CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-jobs">
+        <div class="container">
+            <h3 class="sub-title">Recent jobs</h3>
+            <h2 class="title">Featured jobs</h2>
+            <div class="section-jobs-container">
+                <div class="section-jobs-item">
+                    <a href="" class="section-jobs-logo">
+                        <img src="./public/img/ziggo.webp" alt="ziggo">
+                    </a>
+                    <div class="section-jobs-info">
+                        <h4>
+                            <a href="">Digital Marketer</a>
+                        </h4>
+                        <div class="company-info">
+                            <span>Creative Agency</span>
+                            <span><i class="fas fa-map-marker-alt"></i>Athens, Greece</span>
+                            <span>$3500 - $4000</span>
+                        </div>
+                    </div>
+                    <div class="section-jobs-details">
+                        <a href="" class="btn-border-purple">Full Time</a>
+                        <span>7 hours ago</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-jobs-container">
+                <div class="section-jobs-item">
+                    <a href="" class="section-jobs-logo">
+                        <img src="./public/img/ziggo.webp" alt="ziggo">
+                    </a>
+                    <div class="section-jobs-info">
+                        <h4>
+                            <a href="">Digital Marketer</a>
+                        </h4>
+                        <div class="company-info">
+                            <span>Creative Agency</span>
+                            <span><i class="fas fa-map-marker-alt"></i>Athens, Greece</span>
+                            <span>$3500 - $4000</span>
+                        </div>
+                    </div>
+                    <div class="section-jobs-details">
+                        <a href="" class="btn-border-purple">Full Time</a>
+                        <span>7 hours ago</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-jobs-container">
+                <div class="section-jobs-item">
+                    <a href="" class="section-jobs-logo">
+                        <img src="./public/img/ziggo.webp" alt="ziggo">
+                    </a>
+                    <div class="section-jobs-info">
+                        <h4>
+                            <a href="">Digital Marketer</a>
+                        </h4>
+                        <div class="company-info">
+                            <span>Creative Agency</span>
+                            <span><i class="fas fa-map-marker-alt"></i>Athens, Greece</span>
+                            <span>$3500 - $4000</span>
+                        </div>
+                    </div>
+                    <div class="section-jobs-details">
+                        <a href="" class="btn-border-purple">Full Time</a>
+                        <span>7 hours ago</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section-jobs-container">
+                <div class="section-jobs-item">
+                    <a href="" class="section-jobs-logo">
+                        <img src="./public/img/ziggo.webp" alt="ziggo">
+                    </a>
+                    <div class="section-jobs-info">
+                        <h4>
+                            <a href="">Digital Marketer</a>
+                        </h4>
+                        <div class="company-info">
+                            <span>Creative Agency</span>
+                            <span><i class="fas fa-map-marker-alt"></i>Athens, Greece</span>
+                            <span>$3500 - $4000</span>
+                        </div>
+                    </div>
+                    <div class="section-jobs-details">
+                        <a href="" class="btn-border-purple">Full Time</a>
+                        <span>7 hours ago</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-apply">
+        <div class="container">
+            <h3 class="sub-title">APPLY PROCESS</h3>
+            <h2 class="title"> How it works</h2>
+
+            <div class="section-apply-container">
+                <div class="section-apply-item">
+                    <i class="fa-brands fa-searchengin"></i>
+                    <h3>1. Search a job</h3>
+                    <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+                </div>
+
+                <div class="section-apply-item">
+                    <i class="fa-brands fa-searchengin"></i>
+                    <h3>2. Apply a job</h3>
+                    <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+                </div>
+
+                <div class="section-apply-item">
+                    <i class="fa-brands fa-searchengin"></i>
+                    <h3>3. Get your job</h3>
+                    <p>Sorem spsum dolor sit amsectetur adipisclit, seddo eiusmod tempor incididunt ut laborea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-testimonial">
+        <div class="container">
+
+            <div class="swiper swiper-testimonials">
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="section-testimonial-item">
+                            <div class="testimonial-img">
+                                <img class="img-person" src="/public/img/person2.jpg" alt="person2">
+                                <img class="img-quotes" src="/public/img/Quote.png" alt="quotes">
+                            </div>
+
+                            <h5>Leaonora</h5>
+                            <p>Creative Director</p>
+                            <blockquote class="testimonial-quote">
+                                “I am at an age where I just want to be fit and healthy our bodies are our
+                                responsibility! So start
+                                caring for your body and it will care for you. Eat clean it will care for you and
+                                workout hard.”
+                            </blockquote>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="section-testimonial-item">
+                            <div class="testimonial-img">
+                                <img class="img-person" src="/public/img/person2.jpg" alt="person2">
+                                <img class="img-quotes" src="/public/img/Quote.png" alt="quotes">
+                            </div>
+
+                            <h5>Leaonora</h5>
+                            <p>Creative Director</p>
+                            <blockquote class="testimonial-quote">
+                                “I am at an age where I just want to be fit and healthy our bodies are our
+                                responsibility! So start
+                                caring for your body and it will care for you. Eat clean it will care for you and
+                                workout hard.”
+                            </blockquote>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="section-testimonial-item">
+                            <div class="testimonial-img">
+                                <img class="img-person" src="/public/img/person2.jpg" alt="person2">
+                                <img class="img-quotes" src="/public/img/Quote.png" alt="quotes">
+                            </div>
+
+                            <h5>Leaonora</h5>
+                            <p>Creative Director</p>
+                            <blockquote class="testimonial-quote">
+                                “I am at an age where I just want to be fit and healthy our bodies are our
+                                responsibility! So start
+                                caring for your body and it will care for you. Eat clean it will care for you and
+                                workout hard.”
+                            </blockquote>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination">
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="section-about-us">
+        <div class="container">
+            <div class="section-about-us-container">
+                <div class="section-about-us-text">
+                    <h3 class="sub-title">WHAT WE ARE DOING</h3>
+                    <h2 class="title">24k Talented people are getting Jobs</h2>
+                    <p>Mollit anim laborum duis au dolor in voluptate velit ess cillum dolore eu lore dsu quality mollit
+                        anim laborumuis au dolor in voluptate velit cillum.</p>
+                    <p>Mollit anim laborum duis au dolor in voluptate velit ess cillum dolore eu lore dsu quality mollit
+                        anim laborumuis au dolor in voluptate velit cillum.</p>
+                    <a href="" class="btn-fill-pink">Post a job</a>
+                </div>
+
+                <div class="section-about-us-img">
+                    <div class="about-us-location">
+                        <img src="public/img/man.webp" alt="man">
+                        <div class="about-us-years">
+                            <span>Since</span>
+                            <span>1994</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-blog">
+        <div class="container">
+            <h3 class="sub-title">OUR LATEST BLOG</h3>
+            <h2 class="title">Our recent news</h2>
+
+            <div class="section-blog-container">
+                <article class="section-blog-item">
+                    <div class="blog-item-img">
+                        <img src="./public/img/blog-item.webp" alt="blog-image">
+                        <div class="blog-item-date">
+                            <span>24</span>
+                            <span>Nov</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-item-text">
+                        <span>Properties</span>
+                        <h3>
+                            <a href="">Footprints in Time is perfect House in Kurashiki</a>
+                        </h3>
+
+                        <a href="" class="read-more">Read more</a>
+                    </div>
+
+                </article>
+
+                <article class="section-blog-item">
+                    <div class="blog-item-img">
+                        <img src="./public/img/blog-item.webp" alt="blog-image">
+                        <div class="blog-item-date">
+                            <span>24</span>
+                            <span>Nov</span>
+                        </div>
+                    </div>
+
+                    <div class="blog-item-text">
+                        <span>Properties</span>
+                        <h3>
+                            <a href="">Footprints in Time is perfect House in Kurashiki</a>
+                        </h3>
+
+                        <a href="" class="read-more">Read more</a>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+
+                <div class="footer-item">
+                    <h4>About us</h4>
+                    <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so behold.</p>
+
+                </div>
+
+                <div class="footer-item">
+                    <h4>Contact info</h4>
+                    <address> Address :Your address goes here, your demo address.</address>
+                    <ul>
+                        <li>
+                            <a href="tel:+359987645328">Phone: +35689237278798</a>
+                        </li>
+
+                        <li>
+                            <a href="mailto: example@gmail.com">Email: example@gmail.com</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="footer-item">
+                    <h4>Important link</h4>
+
+                    <ul>
+                        <li>
+                            <a href="">View projeckt</a>
+                        </li>
+                        <li>
+                            <a href="">View projeckt</a>
+                        </li>
+                        <li>
+                            <a href="">View projeckt</a>
+                        </li>
+                        <li>
+                            <a href="">View projeckt</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h4>Newsletter</h4>
+                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                    <form>
+                        <input type="email" placeholder="Email adsress">
+                        <input type="submit">
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <a href="">
+                    <img src="./public/img/download.webp" alt="logo">
+                </a>
+
+                <div class="footer-bottom-item">
+                    <span>5000+</span>
+                    <span>Talented Hunter</span>
+                </div>
+
+                <div class="footer-bottom-item">
+                    <span>5076+</span>
+                    <span>Talented Hunter</span>
+                </div>
+
+                <div class="footer-bottom-item">
+                    <span>567+</span>
+                    <span>Talented Hunter</span>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>Copyright ©2022 All rights reserved | This template is made with by <a href="">Colorlib</a> </p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+
+    <span class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </span>
+
+</body>
+
+</html>
